@@ -553,6 +553,7 @@ func Provider() terraform.ResourceProvider {
 			"alicloud_hbr_backup_jobs":                             dataSourceAlicloudHbrBackupJobs(),
 			"alicloud_click_house_regions":                         dataSourceAlicloudClickHouseRegions(),
 			"alicloud_dts_synchronization_jobs":                    dataSourceAlicloudDtsSynchronizationJobs(),
+			"alicloud_privatelink_vpc_endpoint_security_groups":    dataSourceAlicloudPrivatelinkVpcEndpointSecurityGroups(),
 		},
 		ResourcesMap: map[string]*schema.Resource{
 			"alicloud_instance":                           resourceAliyunInstance(),
@@ -1000,6 +1001,7 @@ func Provider() terraform.ResourceProvider {
 			"alicloud_cloud_sso_group":                                      resourceAlicloudCloudSsoGroup(),
 			"alicloud_dts_synchronization_instance":                         resourceAlicloudDtsSynchronizationInstance(),
 			"alicloud_dts_synchronization_job":                              resourceAlicloudDtsSynchronizationJob(),
+			"alicloud_privatelink_vpc_endpoint_security_group":              resourceAlicloudPrivatelinkVpcEndpointSecurityGroup(),
 		},
 		ConfigureFunc: providerConfigure,
 	}
